@@ -6,7 +6,7 @@ $(document).ready(function(){
         var temperatura = res[0]['valor'];
         var humedad = res[1]['valor'];
         var intensidad = res[2]['valor'];
-        console.log(temperatura);
+        
         $("#temp").text(temperatura);
         $("#hum").text(humedad);
         $("#luz").text(intensidad);
@@ -14,12 +14,12 @@ $(document).ready(function(){
 
     $.post('php/lecturas.php', function(res){
         res = JSON.parse(res);
-        //console.log(res);
+        console.log(res);
         var temperatura = res[0]['valor'];
         var humedad = res[1]['valor'];
         var intensidad = res[2]['valor'];
         
-        if(temperatura >= 10){
+        if(temperatura < 10){
             $('#cloudy').hide();
             $('#sunny').hide();
         }
@@ -52,6 +52,6 @@ $(document).ready(function(){
             $('#pw_off').hide();
         }
 
-    })
+    });
 
 });
