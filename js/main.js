@@ -10,7 +10,7 @@ $(document).ready(function(){
         $("#temp").text(temperatura);
         $("#hum").text(humedad);
         $("#luz").text(intensidad);
-    })
+    });
 
     $.post('php/lecturas.php', function(res){
         res = JSON.parse(res);
@@ -51,7 +51,11 @@ $(document).ready(function(){
         else if(intensidad > 50){
             $('#pw_off').hide();
         }
+    });
 
+    $('#btnActualizar').click(function(){
+        //console.log('Actualizar');
+        location.reload();
     });
 
 });

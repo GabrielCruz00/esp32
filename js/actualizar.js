@@ -29,6 +29,10 @@ $(document).ready(function(){
                 $('#alertHum').hide();
                 $('#alertLuz').hide();
             }
+            
+            setTimeout(function(){
+                location.reload();
+            }, 2000);
         });
     });
 
@@ -45,6 +49,10 @@ $(document).ready(function(){
                 $('#alertHum').show();
                 $('#alertLuz').hide();
             }
+
+            setTimeout(function(){
+                location.reload();
+            }, 2000);
         });
     });
 
@@ -61,6 +69,10 @@ $(document).ready(function(){
                 $('#alertHum').hide();
                 $('#alertLuz').show();
             }
+
+            setTimeout(function(){
+                location.reload();
+            }, 2000);
         });
     });
 });
