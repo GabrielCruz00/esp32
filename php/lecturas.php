@@ -1,7 +1,7 @@
 <?php
 
-// $conexion = new mysqli("localhost", "id18809090_tlacua00", "", "id18809090_dsm" );
-    $conexion = new mysqli("localhost", "root", "", "dsm" );
+    require('./conexion.php');
+    $conexion = abrirConexion();
 
     if(!$conexion){
         $respuesta = ["res" => false];
